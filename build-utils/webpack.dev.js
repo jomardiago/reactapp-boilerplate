@@ -1,10 +1,11 @@
 const path = require('path');
 const Dotenv = require('dotenv-webpack');
-const { DefinePlugin } = require('webpack');
+const { DefinePlugin, HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = {
     mode: 'development',
     plugins: [
+        new HotModuleReplacementPlugin(),
         new Dotenv({
             path: path.resolve(__dirname, '..', './.env.development'),
         }),
