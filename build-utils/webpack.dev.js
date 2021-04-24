@@ -9,9 +9,7 @@ module.exports = {
             path: path.resolve(__dirname, '..', './.env.development'),
         }),
         new DefinePlugin({
-            'process.env': {
-                'NODE_ENV': JSON.stringify('development')
-            }
+            'process.env.NODE_ENV': JSON.stringify('development')
         })
     ],
     devtool: 'eval-source-map',

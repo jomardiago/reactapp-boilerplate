@@ -9,9 +9,7 @@ module.exports = {
             path: path.resolve(__dirname, '..', './.env.production'),
         }),
         new DefinePlugin({
-            'process.env': {
-                'NODE_ENV': JSON.stringify('production'),
-            }
+            'process.env.NODE_ENV': JSON.stringify('production')
         })
     ],
     devtool: 'source-map',
